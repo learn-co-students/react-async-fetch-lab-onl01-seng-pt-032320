@@ -10,11 +10,11 @@ export default class App extends React.Component {
     render() {
         return (
             <div>
-                {this.state.peopleInSpace}
+                {this.state.peopleInSpace.map((person, id) => <h1 key={id} id={id}>{person.name}</h1>)}
             </div>
         )
     }
-    
+
     componentDidMount() {
         let url = 'http://api.open-notify.org/astros.json'
         fetch(url) 
