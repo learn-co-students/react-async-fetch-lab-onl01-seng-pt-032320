@@ -1,13 +1,11 @@
 // create your App component here
 import React, { PureComponent } from 'react';
 
-class App extends React.PureComponent {
-constructor(props){
-    super(props)
+class App extends PureComponent {
+
     state = {
         list: []
     }
-}
 componentDidMount(){
     fetch("http://api.open-notify.org/astros.json")
     .then(response => response.json())
